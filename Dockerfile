@@ -46,12 +46,10 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
     mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
     mv /tmp/slaves $HADOOP_HOME/etc/hadoop/slaves && \
-    mv /tmp/start-hadoop.sh ~/start-hadoop.sh && \
     mv /tmp/run-wordcount.sh ~/run-wordcount.sh && \
     mv /tmp/bootstrap.sh ~/bootstrap.sh
 
-RUN chmod +x ~/start-hadoop.sh && \
-    chmod +x ~/run-wordcount.sh && \
+RUN chmod +x ~/run-wordcount.sh && \
     chmod +x ~/bootstrap.sh && \
     chmod +x $HADOOP_HOME/etc/hadoop/* && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
